@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:src="@mipmap/live_tv_black_48x48"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tv_tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:textSize="20sp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_favorite_border_white_24dp"
+        android:padding="8dp"
+        android:elevation="5dp"
+        app:fabCustomSize="30dp"
+        app:backgroundTint="#FF8AC0"
+        android:layout_gravity="center_vertical"
+        app:borderWidth="0dp"/>
+
+</LinearLayout>

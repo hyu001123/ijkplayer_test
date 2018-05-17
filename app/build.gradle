@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.administrator.ijkplayer_test"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //sourceSets {
+    // main {
+    //      jniLibs.srcDirs = ['jniLibs']  /**在libs文件夹下找so文件*/
+    //  }
+    // }
+    productFlavors {
+       // all32 { minSdkVersion 17 }
+       // all64 { minSdkVersion 17 }
+        // armv5 {}
+        // armv7a {}
+        // arm64 { minSdkVersion 21 }
+        // x86 {}
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:27.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation project(':ijkplayer-arm64')
+    implementation project(':ijkplayer-armv5')
+    implementation project(':ijkplayer-armv7a')
+    implementation project(':ijkplayer-exo')
+    implementation project(':ijkplayer-java')
+    implementation project(':ijkplayer-x86')
+    implementation project(':ijkplayer-x86_64')
+    implementation project(':ijkplayer-example')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.0'
+    implementation 'com.android.support:support-v4:27.1.0'
+    //弹幕
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+    implementation 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
+
+    //# Other ABIs: optional
+    implementation 'com.github.ctiao:ndkbitmap-x86:0.9.21'
+    implementation 'org.litepal.android:core:1.6.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+}

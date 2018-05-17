@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="ijkplayer_test"/>
+    <version value="1"/>
+    <list>
+        <mapping class="com.example.administrator.ijkplayer_test.db.CCTV"/>
+        <mapping class="com.example.administrator.ijkplayer_test.db.GDTV"/>
+        <mapping class="com.example.administrator.ijkplayer_test.db.MyLove"/>
+        <mapping class="com.example.administrator.ijkplayer_test.db.Others"/>
+    </list>
+</litepal>
